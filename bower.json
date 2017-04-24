@@ -1,0 +1,24 @@
+{
+  "name": "project-academy",
+  "authors": [
+    "Vladyslav Svitelskyi <Vlad.Svitelckyi@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "materialize": "^0.98.2",
+    "angular": "^1.6.4",
+    "angular-ui-router": "^0.4.2"
+  }
+}
