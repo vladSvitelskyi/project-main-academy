@@ -4,6 +4,7 @@
   "description": "",
   "main": "angular.min.js",
   "scripts": {
+    "start": "npm install && npm i -g bower install && bower install && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
