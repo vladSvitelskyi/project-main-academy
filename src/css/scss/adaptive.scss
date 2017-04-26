@@ -1,0 +1,64 @@
+/* Phones ----------- */
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    /* html */
+    h4 {
+        font-size: 1rem;
+    }
+    /* main nav */
+    nav,
+    nav .nav-wrapper i,
+    nav a.button-collapse,
+    nav a.button-collapse i {
+        height: 60px;
+        line-height: 60px;
+    }
+    #logo-container img {
+        width: 60px;
+        height: 60px;
+    }
+    /* home slider */
+    .slider {
+        &.fullscreen {
+            height: 350px;
+        }
+    }
+}
+
+
+/* Tablets ----------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1025px) and (max-width: 1599px) {}
+
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1600px) {
+    /* html */
+    h4 {
+        font-size: 3rem;
+    }
+    /* main nav */
+    nav,
+    nav .nav-wrapper i,
+    nav a.button-collapse,
+    nav a.button-collapse i {
+        height: 80px;
+        line-height: 80px;
+    }
+    #logo-container img {
+        width: 80px;
+        height: 80px;
+    }
+    /* home slider */
+    .slider {
+        &.fullscreen {
+            height: 550px;
+        }
+    }
+}
