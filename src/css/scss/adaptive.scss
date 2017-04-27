@@ -3,8 +3,12 @@
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     /* html */
     h4 {
-        font-size: 1rem;
+        font-size: 1.75rem;
     }
+    h5 {
+   		font-size: 1.25rem;
+	}
+
     /* main nav */
     nav,
     nav .nav-wrapper i,
@@ -41,8 +45,11 @@
 @media only screen and (min-width: 1600px) {
     /* html */
     h4 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
+    h5 {
+   		font-size: 2rem;
+	}
     /* main nav */
     nav,
     nav .nav-wrapper i,

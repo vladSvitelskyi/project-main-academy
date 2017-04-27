@@ -1,33 +1,75 @@
-/******************/
-/***** VARIABLES *****/
-/******************/
+/* INCULDE FONTS */
 
+@inculude font-face(Merriweather Sans Bold, fonts/MerriweatherSans/MerriweatherSans-Bold, normal, normal, woff woff2);
+@inculude font-face(Merriweather Sans Regular, fonts/MerriweatherSans/MerriweatherSans-Regular, normal, normal, woff woff2);
+@inculude font-face(Merriweather Sans Light, fonts/MerriweatherSans/MerriweatherSans-Light, normal, normal, woff woff2);
+
+/*********************/
+/***** VARIABLES *****/
+/*********************/
 
 /* colors */
+
+$white: #fff;
+$grey: #9e9e9e;
 $grey_darken_1: #757575;
 $grey_darken_2: #616161;
-$grey_darken_3: #424242; 
-$grey_darken_4: #212121; 
-$white: #fff;
+$grey_darken_3: #424242;
+$grey_darken_4: #212121;
+$red: #f44336;
+$grey_red_1: #e53935;
+$grey_red_2: #d32f2f;
+$grey_red_3: #c62828;
+$grey_red_4: #b71c1c;
+
+/* fonts */
+
+$merriweather_sans_bold: 'Merriweather Sans Bold', sans-serif;
+$merriweather_sans_regular: 'Merriweather Sans Regular', sans-serif;
+$merriweather_sans_light: 'Merriweather Sans Light', sans-serif;
 
 
 /******************/
 /***** STYLES *****/
 /******************/
 
-/* html */ 
+
+/* html */
 
 h4 {
     color: $white;
+    font-family: $merriweather_sans_bold;
+    font-weight: 700;
     font-size: 2rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+}
+h5 {
+    color: $grey_darken_4;
+    font-family: $merriweather_sans_regular;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+p {
+    color: $grey_darken_4;
+    font-family: $merriweather_sans_light;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.75rem;
 }
 
 /* main nav */
 
 nav {
-  background: linear-gradient(to left, $grey_darken_1, $grey_darken_4);
+    background: linear-gradient(to left, $grey_darken_1, $grey_darken_4);
+}
+
+nav ul a {
+    font-family: $merriweather_sans_regular;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
 }
 
 nav,
@@ -69,13 +111,19 @@ nav a.button-collapse i {
 }
 
 .slider .slides li .caption {
-  top: 15%;
+    top: 15%;
 }
 
 #slider_h4_prices {
-  color: $grey_darken_4;
+    color: $grey_darken_4;
 }
 
+
+/* section specifications */
+
+.container {
+  /*background-color: transparent;*/
+}
 
 /* home carousel */
 
@@ -94,9 +142,9 @@ nav a.button-collapse i {
     }
 }
 
-p {
-    line-height: 2rem;
-}
+
+
+
 
 .button-collapse {
     color: #26a69a;
@@ -140,5 +188,9 @@ p {
 footer.page-footer {
     margin: 0;
 }
+
+/******************************/
+/*** IMPORT ALL .scss FILES ***/
+/******************************/
 
 @import 'adaptive.scss';

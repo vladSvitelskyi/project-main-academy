@@ -59,6 +59,10 @@ gulp.task('bower_styles', function() {
    gulp.src(startFolder + 'images/**/*')
 		.pipe(gulp.dest(finishFolder + 'images/'));
 });
+ gulp.task('fonts', function () {
+ 	gulp.src(startFolder + 'fonts/**/**/*')
+ 		.pipe(gulp.dest(finishFolder + 'fonts/'));
+ });
 
 gulp.task('js', function() {
 	gulp.src([
@@ -95,7 +99,7 @@ gulp.task('watch', function() {
 	gulp.watch(startFolder + 'css/**/**.*', ['sass']);
 });
 
-gulp.task('build', ['html', 'sass', 'js'], function() {
+gulp.task('build', ['html', 'sass', 'js', 'fonts'], function() {
 
 });
 gulp.task('default', ['connect', 'watch', 'build']);
