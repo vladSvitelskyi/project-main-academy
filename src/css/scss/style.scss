@@ -1,8 +1,6 @@
-/* INCULDE FONTS */
+/* INCLUDE FONTS */
 
-@inculude font-face(Merriweather Sans Bold, fonts/MerriweatherSans/MerriweatherSans-Bold, normal, normal, woff woff2);
-@inculude font-face(Merriweather Sans Regular, fonts/MerriweatherSans/MerriweatherSans-Regular, normal, normal, woff woff2);
-@inculude font-face(Merriweather Sans Light, fonts/MerriweatherSans/MerriweatherSans-Light, normal, normal, woff woff2);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,400,700);
 
 /*********************/
 /***** VARIABLES *****/
@@ -24,9 +22,7 @@ $grey_red_4: #b71c1c;
 
 /* fonts */
 
-$merriweather_sans_bold: 'Merriweather Sans Bold', sans-serif;
-$merriweather_sans_regular: 'Merriweather Sans Regular', sans-serif;
-$merriweather_sans_light: 'Merriweather Sans Light', sans-serif;
+$comfortaa: "Comfortaa", cursive;
 
 
 /******************/
@@ -38,24 +34,24 @@ $merriweather_sans_light: 'Merriweather Sans Light', sans-serif;
 
 h4 {
     color: $white;
-    font-family: $merriweather_sans_bold;
+    font-family: $comfortaa;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
 h5 {
     color: $grey_darken_4;
-    font-family: $merriweather_sans_regular;
-    font-weight: 600;
+    font-family: $comfortaa;
+    font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
 }
 p {
     color: $grey_darken_4;
-    font-family: $merriweather_sans_light;
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-family: $comfortaa;
+    font-weight: 300;
+    font-size: 1rem;
     text-align: justify;
     line-height: 1.75rem;
 }
@@ -67,8 +63,8 @@ nav {
 }
 
 nav ul a {
-    font-family: $merriweather_sans_regular;
-    font-weight: 500;
+    font-family: $comfortaa;
+    font-weight: 400;
     letter-spacing: 0.1rem;
 }
 

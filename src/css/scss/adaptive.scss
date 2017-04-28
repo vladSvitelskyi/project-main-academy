@@ -3,10 +3,13 @@
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     /* html */
     h4 {
-        font-size: 1.75rem;
+        font-size: 1.55rem;
     }
     h5 {
    		font-size: 1.25rem;
+	}
+	p {
+		font-size: 0.85rem;
 	}
 
     /* main nav */
@@ -50,6 +53,10 @@
     h5 {
    		font-size: 2rem;
 	}
+	p {
+		font-size: 1.15rem;
+	}
+
     /* main nav */
     nav,
     nav .nav-wrapper i,

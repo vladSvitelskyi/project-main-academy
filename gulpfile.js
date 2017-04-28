@@ -99,7 +99,7 @@ gulp.task('watch', function() {
 	gulp.watch(startFolder + 'css/**/**.*', ['sass']);
 });
 
-gulp.task('build', ['html', 'sass', 'js', 'fonts'], function() {
+gulp.task('build', ['html', 'sass', 'js'], function() {
 
 });
 gulp.task('default', ['connect', 'watch', 'build']);
