@@ -1,5 +1,7 @@
 // Main angular service
-angular.module('app')
-.factory('apiService', ['$http', function($http){
+(function(angular) {
+	angular.module('app')
+	.factory('apiService', ['$http', function($http){
 
-}]);
+	}]);
+})(angular);

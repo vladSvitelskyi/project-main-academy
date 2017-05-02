@@ -1,6 +1,6 @@
 /* Phones ----------- */
 
-@media only screen and (min-width: 0px) and (max-width: 767px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
     /* html */
     h1 {
     	font-size: 3rem;
@@ -14,9 +14,16 @@
 	p {
 		font-size: 0.7rem;
 	}
+	span {
+		font-size: 0.5rem;
+	}
 
-    /* main nav */
-    nav ul a {
+    /******************/
+    /****** HOME ******/
+    /******************/
+
+    /* header */
+    header nav ul a {
 	    font-size: 0.6rem;
 	}
     nav,
@@ -30,26 +37,48 @@
         width: 90px;
         height: 60px;
     }
-    /* home slider */
+    /* slider */
     .slider {
         &.fullscreen {
             height: 350px;
         }
     }
+    /* parallax */
+    
+    .parallax-container {
+        min-height: 350px;
+    }
+
+    /******************/
+    /****** ORDER ******/
+    /******************/
+
+    /******************/
+    /****** GALLERY ******/
+    /******************/
+
+    #gallery_container {
+        width: 70%;
+    }
+
 }
 
 
 /* Tablets ----------- */
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+@media only screen and (min-width: 661px) and (max-width: 992px) {
+
+}
 
 
 /* Desktops and laptops ----------- */
 
-@media only screen and (min-width: 1025px) and (max-width: 1599px) {}
+@media only screen and (min-width: 993px) and (max-width: 1599px) {
+    
+}
 
 
-/* Large screens ----------- */
+/* Large screens ----- */
 
 @media only screen and (min-width: 1600px) {
     /* html */
@@ -65,9 +94,13 @@
 	p {
 		font-size: 1.1rem;
 	}
+	span {
+		font-size: 1rem;
+	}
 
-    /* main nav */
-	nav ul a {
+
+    /* header */
+	header nav ul a {
 	    font-size: 0.9rem;
 	}
 
@@ -82,10 +115,27 @@
         width: 130px;
         height: 80px;
     }
-    /* home slider */
+    /* slider */
     .slider {
         &.fullscreen {
             height: 550px;
         }
+    }
+    /* parallax */
+    
+    .parallax-container {
+        min-height: 550px;
+    }
+
+    /******************/
+    /****** ORDER ******/
+    /******************/
+
+    /******************/
+    /****** GALLERY ******/
+    /******************/
+
+    #gallery_container {
+        width: 85%;
     }
 }

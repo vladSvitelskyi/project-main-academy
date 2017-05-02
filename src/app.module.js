@@ -1,5 +1,9 @@
-// All used Angular modules
-angular.module('app', [
-	'ui.router',
-	'authorizationModule'
-]);
+// All Angular modules
+(function(angular) {
+	angular.module('app', [
+		'ui.materialize',
+		'ui.router',
+		'authorizationModule',
+		'ordersModule'
+	]);
+})(angular);

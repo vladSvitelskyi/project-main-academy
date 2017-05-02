@@ -1,0 +1,60 @@
+// selects
+// #orders_container {
+// 	& h3 {
+// 		text-align: center;
+// 		margin: 40px 0;
+// 	}
+// 	& .input-field {
+// 		margin-bottom: 40px;
+// 		& .prefix.active {
+// 			color: red;
+// 		}
+// 	}
+// 	width: 50%;	
+// 	& .select-wrapper input.select-dropdown {
+// 		padding-top: 10px;
+// 		border-bottom: 1px solid $grey_darken_4;
+// 		color: red;
+// 	    font-family: $orbitron;
+// 	    font-weight: 300;
+// 	    font-size: 1.25rem;
+// 	}
+// 	& label {
+// 		color: $grey_darken_4;
+// 	    font-family: $orbitron;
+// 	    font-weight: 300;
+// 	    font-size: 1.25rem;
+// 	}
+// 	& .row {
+// 		margin-bottom: 40px;
+// 		& .input-field {
+// 			margin-bottom: 0;
+// 		}
+// 	}
+// 	& #submit_container {
+// 		text-align: center;
+// 		& .btn {
+// 			background-color: $grey_darken_4;
+// 			&:hover {
+// 				background-color: #d32f2f;
+// 			}
+// 		}
+// 	}
+// }
+
+// .dropdown-content li {
+// 	min-height: 30px;
+// 	& span {
+// 		color: $grey_darken_4;
+// 		font-family: $orbitron;
+// 		font-weight: 700;
+// 		font-size: 0.8rem;
+// 		&:hover {
+// 			background-color: $grey_lighten_3;
+// 		}
+// 	}
+// 	&.active.selected {
+// 		background-color: $red_lighten_3;
+// 	}
+// }
+

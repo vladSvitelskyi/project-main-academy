@@ -1,0 +1,9 @@
+#gallery_container {
+	width: 80%;
+	& h3, h6 {
+		text-align: center;
+	}
+	& .card .card-content {
+		padding: 15px;
+	}
+}

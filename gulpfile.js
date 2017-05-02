@@ -81,10 +81,11 @@ gulp.task('js', function() {
 
 	gulp.src([
 			// libs js files
+			'bower_components/jquery/dist/jquery.js',
 			'bower_components/angular/angular.js',
 			'bower_components/angular-ui-router/release/angular-ui-router.js',
-			'bower_components/jquery/dist/jquery.js',
-			'bower_components/materialize/dist/js/materialize.js'
+			'bower_components/materialize/dist/js/materialize.js',
+			'bower_components/angular-materialize/src/angular-materialize.js'
 			])
 		.pipe(concat('bower_components.js'))
 		// .pipe(minify())
