@@ -1,0 +1,40 @@
+#contact_container {
+	& h3 {
+		text-align: center;
+	}
+    & #google_map_container {
+        margin: 0 auto;
+        width: 80%;
+        height: 350px;
+    }
+    & .row {
+    	margin: 20px auto;
+    	width: 80%;
+    	& #col_address {
+    		/*padding-top: 7%;*/
+    		& img {
+    			display: block;
+    			margin: 1.46rem auto 1.168rem;
+    			width: 30px;
+    		}
+    		& h6 {
+    			text-align: center;
+    			text-transform: uppercase;
+    		}
+    	}
+    	& #col_contacts {
+    		& .contact_text_container {
+    			text-align: center;
+				& h6 {
+					display: inline-block;
+					text-transform: uppercase;
+				}
+				& p {
+					display: inline-block;
+				}
+    		}
+
+
+    	}
+    }
+}

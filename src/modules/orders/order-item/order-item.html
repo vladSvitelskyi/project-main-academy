@@ -2,23 +2,22 @@
     <h3>Your order</h3>
     <form class="col s12">
         <div input-field>
-            <select class="browser-default" material-select>
+            <legend>1. Choose brand</legend>
+            <select class="browser-default" ng-model="selectedItem" ng-options="item.brand for item in selectsDataArr" material-select>
                 <option value="">Select brand</option>
-                <option ng-repeat="element in selectsDataArr" >{{element.brand}}</option>
             </select>
-            <label>1. Choose brand</label>
         </div>
         <div input-field>
-            <select class="browser-default" material-select>
+            <legend>2. Choose model</legend>
+            <select class="browser-default" ng-model="selectedItem" ng-options="item.model for item in selectsDataArr" material-select>
                 <option>Select model</option>
             </select>
-            <label>2. Choose model</label>
         </div>
         <div input-field>
+            <legend>3. Choose service</legend>            
             <select class="browser-default" material-select>
                 <option>Select service</option>
             </select>
-            <label>3. Choose service</label>            
         </div>
         <div input-field>
             <input type="text" id="first_name" ng-model="dummyInputs.inputFieldInput">

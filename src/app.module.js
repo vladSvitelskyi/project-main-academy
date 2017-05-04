@@ -1,9 +1,10 @@
 // All Angular modules
-(function(angular) {
-	angular.module('app', [
-		'ui.materialize',
+angular.module('app', [
 		'ui.router',
+		'ui.materialize',
+		'ngMap',
 		'authorizationModule',
-		'ordersModule'
-	]);
-})(angular);
+		'ordersModule',
+		'contactModule'
+]);
+

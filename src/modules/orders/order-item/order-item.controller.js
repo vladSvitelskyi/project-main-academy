@@ -10,8 +10,6 @@ angular.module('ordersModule')
 		model: '',
 		service: ''
 	};
-	$scope.selectsDataArr = [];
-	console.log("Selects Data Arr",selectsDataArr);
 	// $scope.postOrderModel = {
 	// 	brand: '',
 	// 	model: '',
@@ -20,13 +18,17 @@ angular.module('ordersModule')
 	// 	phone: '',
 	// 	date: ''
 	// };
+	
+	$scope.selectsDataArr = [];
+
 	$scope.getDataForSelects = function(type){
 		ordersService.getDataForSelects(type)
 		.then(function(data){
 			$scope.selectsDataArr = data;
-			console.log("Selects Data Arr",selectsDataArr);
+			console.log("Selects Data Arr", $scope.selectsDataArr);
 		});
 	};	
+	
 	$scope.getDataForSelects();
 	
 	// $scope.postOrder = function(){

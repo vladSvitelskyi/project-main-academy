@@ -60,6 +60,15 @@
     #gallery_container {
         width: 70%;
     }
+    
+    /******************/
+    /****** CONTACT ******/
+    /******************/
+    #contact_container {
+        & #google_map_container {
+            height: 250px;
+        }
+    }
 
 }
 

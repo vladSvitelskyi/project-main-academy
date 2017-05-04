@@ -106,12 +106,14 @@ header nav {
         letter-spacing: 0.05rem;
     }
     & .side-nav {
-        width: 200px;
         background-color: $grey_darken_4;
         & li {
             border-bottom: 1px solid $white; 
             & a {
                 color: $white;
+                &:hover {
+                    color: red;
+                }
             }   
         } 
     }
@@ -225,5 +227,6 @@ nav a.button-collapse i {
 
 @import 'orders.scss';   
 @import 'gallery.scss';
+@import 'contact.scss';
 @import 'adaptive.scss';
 
