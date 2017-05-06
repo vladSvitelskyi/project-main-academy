@@ -1,0 +1,59 @@
+#order_container {
+	width: 40%;
+	& h3 {
+		margin-top: 0;
+		padding-top: 20px;
+		text-align: center;
+	}
+	& .input-field {
+		margin-top: 0;
+	}
+	& #selects_container {
+		& .select-div {
+			margin-top: 30px;
+			& legend {
+			    font-family: $orbitron;
+			    font-weight: 300;
+			    font-size: 1.25rem;				
+			}
+			& select {
+				padding: 10px;			
+			    font-family: $orbitron;
+			    font-weight: 300;
+			    font-size: 1rem;	
+			    cursor: pointer;
+			    &:focus {
+			    	border: 1px solid #2bbbad;
+			    	outline: none;
+			    }
+			}
+		}
+	}
+	& #inputs_container {
+		& .input-div {
+			margin-top: 10px;
+		}	
+		& .input-div:first-child {
+			margin-top: 30px;
+		}	
+		& label {
+		    font-family: $orbitron;
+		    font-weight: 300;
+		    font-size: 1.25rem;		
+		    cursor: pointer;
+		}	
+		& input[type=text] {
+		    font-family: $orbitron;
+		    font-weight: 300;
+		    font-size: 1rem;	
+		    cursor: pointer;
+		}
+	}	
+	& #submit_container {
+		margin-top: 15px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+}
+
+

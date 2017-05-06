@@ -9,7 +9,7 @@ angular.module('app')
                 templateUrl: './home.html',
             })
             .state('order', {
-                url: '/orders',
+                url: '/order',
                 templateUrl: './views/orders/order-item/order-item.html',
                 controller: 'orderItemController'
             })

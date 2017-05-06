@@ -1,31 +1,25 @@
 angular.module('ordersModule')
 .controller('orderItemController', ['$scope', 'ordersService', function($scope, ordersService){
-	console.log("orderItemCtrl is working!");
+	$scope.orderModel = {};
 
-	$scope.getOrderModel = {
-		"_id": {
-			"$iod": ''
-		},
-		brand: '',
-		model: '',
-		service: ''
+	$scope.sendData = function() {
+		console.log($scope.orderModel);
 	};
-	// $scope.postOrderModel = {
-	// 	brand: '',
-	// 	model: '',
-	// 	service: '',
-	// 	firstName: '',
-	// 	phone: '',
-	// 	date: ''
-	// };
 	
 	$scope.selectsDataArr = [];
+	$scope.selectsServicesArr = [
+		{
+			"service": "Set spoiler"
+		},
+		{	
+			"service": "Painting"
+		}
+	];
 
 	$scope.getDataForSelects = function(type){
 		ordersService.getDataForSelects(type)
 		.then(function(data){
 			$scope.selectsDataArr = data;
-			console.log("Selects Data Arr", $scope.selectsDataArr);
 		});
 	};	
 	
@@ -45,25 +39,6 @@ angular.module('ordersModule')
 	$scope.weekdaysFull = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	$scope.weekdaysLetter = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 	$scope.disable = [false, 7];
-	$scope.today = 'Today';
-	$scope.clear = 'Clear';
-	$scope.close = 'Close';
-	var days = 31;
+	var days = 0;
 	$scope.minDate = (new Date($scope.currentTime.getTime() - ( 1000 * 60 * 60 *24 * days ))).toISOString();
-	$scope.maxDate = (new Date($scope.currentTime.getTime() + ( 1000 * 60 * 60 *24 * days ))).toISOString();
-	$scope.onStart = function () {
-	    console.log('onStart');
-	};
-	$scope.onRender = function () {
-	    console.log('onRender');
-	};
-	$scope.onOpen = function () {
-	    console.log('onOpen');
-	};
-	$scope.onClose = function () {
-	    console.log('onClose');
-	};
-	$scope.onSet = function () {
-	    console.log('onSet');
-	};
 }]);

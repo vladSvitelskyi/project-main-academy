@@ -1,11 +1,10 @@
 angular.module('ordersModule')
     .factory('ordersService', ['$http', 'config', function($http, config) {
-        console.log("OrdersService is working!");
         var publicMethods = {
             getDataForSelects: function(type) {
-                return $http.get(config.base + config.prefix + config.orders + config.apiKey)
+                return $http.get(config.base + config.prefix + config.selectsData + config.apiKey)
                     .then(function(response) {
-                        console.log("Get data for selects!", response.data);                        
+                        console.log("Get response!", response.data);                        
                         return response.data;
                     })
                     .catch(function(err) {

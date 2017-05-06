@@ -1,109 +1,47 @@
-<div class="container" id="orders_container">
+<div class="container" id="order_container">
     <h3>Your order</h3>
-    <form class="col s12">
-        <div input-field>
-            <legend>1. Choose brand</legend>
-            <select class="browser-default" ng-model="selectedItem" ng-options="item.brand for item in selectsDataArr" material-select>
-                <option value="">Select brand</option>
-            </select>
+    <form class="col s12" ng-submit="sendData()">
+        <div id="selects_container">
+            <div input-field class="select-div">
+                <legend>1. Choose brand</legend>
+                <select class="browser-default" ng-model="orderModel.brand" material-select>
+                    <option value="">Select brand</option>
+                    <option ng-repeat="item in selectsDataArr" ng-value="item.brand">{{item.brand}}</option>
+                </select>
+            </div>
+            <div input-field class="select-div">
+                <legend>2. Choose model</legend>
+                <select class="browser-default" ng-model="orderModel.model" ng-disabled="!orderModel.brand" material-select>
+                    <option value="">Select model</option>
+                    <option ng-repeat="item in selectsDataArr | filter: orderModel.brand" ng-value="item.model">{{item.model}}</option>
+                </select>
+            </div>
+            <div input-field class="select-div">
+                <legend>3. Choose service</legend>
+                <select class="browser-default" ng-model="orderModel.service" ng-disabled="!orderModel.model" material-select>
+                    <option value="">Select service</option>
+                    <option ng-repeat="item in selectsServicesArr" ng-value="item.service">{{item.service}}</option>
+                </select>
+            </div>
         </div>
-        <div input-field>
-            <legend>2. Choose model</legend>
-            <select class="browser-default" ng-model="selectedItem" ng-options="item.model for item in selectsDataArr" material-select>
-                <option>Select model</option>
-            </select>
+        <div id="inputs_container">
+            <div input-field class="input-div">
+                <input type="text" id="first_name" ng-model="orderModel.firstName">
+                <label for="firts_name">First name</label>
+            </div>
+            <div input-field class="input-div">
+                <label for="phone_number">Phone</label>
+                <input type="text" id="phone_number" ng-model="orderModel.phone">
+            </div>
+            <div input-field class="input-div">
+                <label for="inputCreated">Date</label>
+                <input ng-model="orderModel.date" input-date type="text" name="created" id="inputCreated" format="dd/mm/yyyy" months-full="{{ month }}" months-short="{{ monthShort }}" weekdays-full="{{ weekdaysFull }}" weekdays-short="{{ weekdaysShort }}" weekdays-letter="{{ weekdaysLetter }}" disable="disable" min="{{ minDate }}" first-day="1">
+            </div>
         </div>
-        <div input-field>
-            <legend>3. Choose service</legend>            
-            <select class="browser-default" material-select>
-                <option>Select service</option>
-            </select>
-        </div>
-        <div input-field>
-            <input type="text" id="first_name" ng-model="dummyInputs.inputFieldInput">
-            <label for="firts_name">First name</label>
-        </div>
-        <div input-field>
-            <input type="text" id="phone_number" ng-model="dummyInputs.inputFieldInput">
-            <label for="phone_number">Phone</label>
-        </div>        
-        <label for="inputCreated">Input date</label>
-        <input input-date
-                type="text"
-                name="created"
-                id="inputCreated"
-                ng-model="currentTime"
-                container=""
-                format="dd/mm/yyyy"
-                months-full="{{ month }}"
-                months-short="{{ monthShort }}"
-                weekdays-full="{{ weekdaysFull }}"
-                weekdays-short="{{ weekdaysShort }}"
-                weekdays-letter="{{ weekdaysLetter }}"
-                disable="disable"
-                min="{{ minDate }}"
-                max="{{ maxDate }}"
-                today="today"
-                first-day="1"
-                clear="clear"
-                close="close"
-                select-years="15"
-                on-start="onStart()"
-                on-render="onRender()"
-                on-open="onOpen()"
-                on-close="onClose()"
-                on-set="onSet()"
-                on-stop="onStop()"
-        />
         <div class="row" id="submit_container">
             <button class="btn waves-effect waves-light" type="submit" name="action">Send
                 <i class="material-icons right">send</i>
             </button>
-        </div> 
-
-<!--         <div class="input-field col s12">
-            <select>
-                <option value="" disabled selected>brand</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
-            <label>1. Choose brand</label>
         </div>
-        <div class="input-field col s12">
-            <select>
-                <option value="" disabled selected>model</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
-            <label>2. Choose model</label>
-        </div>
-        <div class="input-field col s12">
-            <select>
-                <option value="" disabled selected>service</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
-            <label>3. Choose servise</label>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text">
-                <label for="icon_prefix">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel">
-                <label for="icon_telephone">Telephone</label>
-            </div>
-        </div>
-        <div class="row" id="submit_container">
-	        <button class="btn waves-effect waves-light" type="submit" name="action">Send
-				<i class="material-icons right">send</i>
-			</button>
-		</div> -->
     </form>
 </div>
