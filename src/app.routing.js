@@ -12,6 +12,12 @@ angular.module('app')
                 url: '/order',
                 templateUrl: './views/orders/order-item/order-item.html',
                 controller: 'orderItemController'
+                // resolve: {
+                //     order: function(ordersService){
+                //         console.log("Order resolve!");
+                //         return ordersService.getDataForSelects();
+                //     }
+                // }                
             })
             .state('gallery', {
                 url: '/gallery',

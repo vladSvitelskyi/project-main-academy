@@ -5,6 +5,7 @@
 		prefix: '/api/1/databases/db_vlad_svitelskyi/collections',
 		users: '/users',
 		selectsData: '/selectsData',
+		orders: '/orders',
 		apiKey: '?apiKey=fy47MSM5Wn_pJcQAbdqNsDVEFd_svQZe'
 	});
 })(angular);

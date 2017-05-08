@@ -14,17 +14,25 @@
 			& legend {
 			    font-family: $orbitron;
 			    font-weight: 300;
-			    font-size: 1.25rem;				
+			    font-size: 1.25rem;	
+			    letter-spacing: 0.1rem;			
 			}
 			& select {
-				padding: 10px;			
+				padding: 10px;
+				border: 1px solid $indigo_darken_4;
+				color: $indigo_darken_4;			
 			    font-family: $orbitron;
 			    font-weight: 300;
-			    font-size: 1rem;	
+			    font-size: 1.1rem;	
+		    	letter-spacing: 0.2rem;			    
 			    cursor: pointer;
 			    &:focus {
-			    	border: 1px solid #2bbbad;
+			    	/*border: 1px solid #9e9e9e;*/
 			    	outline: none;
+			    }
+			    &:disabled {
+			    	color: rgba(0,0,0,.3);
+			    	border: 1px solid rgba(0,0,0,.3);
 			    }
 			}
 		}
@@ -37,15 +45,20 @@
 			margin-top: 30px;
 		}	
 		& label {
+			color: $grey_darken_4;
 		    font-family: $orbitron;
 		    font-weight: 300;
-		    font-size: 1.25rem;		
+		    font-size: 1.25rem;	
+		    letter-spacing: 0.1rem;			    	
 		    cursor: pointer;
 		}	
 		& input[type=text] {
+			padding-left: 15px;
+			color: $indigo_darken_4;
 		    font-family: $orbitron;
 		    font-weight: 300;
-		    font-size: 1rem;	
+		    font-size: 1.1rem;
+		    letter-spacing: 0.2rem;	
 		    cursor: pointer;
 		}
 	}	
@@ -53,7 +66,29 @@
 		margin-top: 15px;
 		margin-bottom: 30px;
 		text-align: center;
+        & .btn {
+            color: $white;
+            background-color: $grey_darken_4;
+            font-family: $orbitron;
+            letter-spacing: 0.2rem;
+            &:hover {
+                color: $white;
+                background-color: $indigo_darken_4;
+            }
+        }
 	}
 }
 
+/* Date picker */
+.picker__close, .picker__clear, .picker__today {
+	color: #26a69a;
+} 
+
+/* validation toast */
+.toast {
+    color: $white;
+    background-color: $grey_darken_4;
+    font-family: $orbitron;
+    letter-spacing: 0.2rem;
+}
 

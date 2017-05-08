@@ -3,18 +3,17 @@ angular.module('ordersModule')
         var publicMethods = {
             getDataForSelects: function(type) {
                 return $http.get(config.base + config.prefix + config.selectsData + config.apiKey)
-                    .then(function(response) {
-                        console.log("Get response!", response.data);                        
+                    .then(function(response) {                        
                         return response.data;
                     })
                     .catch(function(err) {
                         console.log(err);
                     });
             },
-            postOrder: function(order) {
+            sendOrder: function(order) {
                 return $http.post(config.base + config.prefix + config.orders + config.apiKey, order)
                     .then(function(response) {
-                        console.log("Post this order!", response);
+                        console.log("Send order!", response);
                         return response.data;
                     })
                     .catch(function(err) {
@@ -22,6 +21,5 @@ angular.module('ordersModule')
                     });
             }
         };
-
         return publicMethods;
     }]);

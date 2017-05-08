@@ -1,11 +1,7 @@
 angular.module('ordersModule')
 .controller('orderItemController', ['$scope', 'ordersService', function($scope, ordersService){
+	// VARIABLES
 	$scope.orderModel = {};
-
-	$scope.sendData = function() {
-		console.log($scope.orderModel);
-	};
-	
 	$scope.selectsDataArr = [];
 	$scope.selectsServicesArr = [
 		{
@@ -16,6 +12,10 @@ angular.module('ordersModule')
 		}
 	];
 
+	// QUESTION !!! ****************************************************
+	$scope.messageForToast = 'toast';
+
+	// FUNCTIONS
 	$scope.getDataForSelects = function(type){
 		ordersService.getDataForSelects(type)
 		.then(function(data){
@@ -24,6 +24,32 @@ angular.module('ordersModule')
 	};	
 	
 	$scope.getDataForSelects();
+
+	$scope.sendData = function() {
+		console.log("Order model: ", $scope.orderModel);
+		// validation
+		var flag = 6;
+		for(key in $scope.orderModel) {
+			if ($scope.orderModel[key] !== 'string') {
+				flag --;
+				console.log("flag = ", flag);
+			}
+		}
+		if (angular.equals({}, $scope.orderModel)) {
+			alert("Please, fill all the fiels.");
+			$scope.messageForToast = 'Please, fill all the fiels.';
+		} else {
+			if (flag != 0) {
+				alert("Some fiels are empty!");
+				$scope.messageForToast = 'Some fiels are empty.';				
+			} else {
+				ordersService.sendOrder($scope.orderModel);
+				alert("Good! Your order accepted!");
+				$scope.messageForToast = 'Good! Your order accepted!';
+			}	
+		}
+	};
+	
 	
 	// $scope.postOrder = function(){
 	// 	ordersService.postOrder($scope.postOrderModel);

@@ -26,8 +26,8 @@
         </div>
         <div id="inputs_container">
             <div input-field class="input-div">
-                <input type="text" id="first_name" ng-model="orderModel.firstName">
                 <label for="firts_name">First name</label>
+                <input type="text" id="first_name" ng-model="orderModel.firstName">
             </div>
             <div input-field class="input-div">
                 <label for="phone_number">Phone</label>
@@ -38,9 +38,9 @@
                 <input ng-model="orderModel.date" input-date type="text" name="created" id="inputCreated" format="dd/mm/yyyy" months-full="{{ month }}" months-short="{{ monthShort }}" weekdays-full="{{ weekdaysFull }}" weekdays-short="{{ weekdaysShort }}" weekdays-letter="{{ weekdaysLetter }}" disable="disable" min="{{ minDate }}" first-day="1">
             </div>
         </div>
-        <div class="row" id="submit_container">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Send
-                <i class="material-icons right">send</i>
+        <div id="submit_container">
+            <button class="btn waves-effect waves-light" type="submit" name="action" message="{{messageForToast}}" duration="3000" toast='click'>Send
+                <!-- <i class="material-icons right">send</i> -->
             </button>
         </div>
     </form>
