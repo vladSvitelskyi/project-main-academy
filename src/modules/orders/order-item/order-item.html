@@ -4,16 +4,16 @@
         <div id="selects_container">
             <div input-field class="select-div">
                 <legend>1. Choose brand</legend>
-                <select class="browser-default" ng-model="orderModel.brand" material-select>
+                <select class="browser-default" ng-model="orderModel.data" material-select>
                     <option value="">Select brand</option>
-                    <option ng-repeat="item in selectsDataArr" ng-value="item.brand">{{item.brand}}</option>
+                    <option ng-repeat="item in selectsDataArr" ng-value="item">{{item.brand}}</option>
                 </select>
             </div>
             <div input-field class="select-div">
                 <legend>2. Choose model</legend>
-                <select class="browser-default" ng-model="orderModel.model" ng-disabled="!orderModel.brand" material-select>
+                <select class="browser-default" ng-model="orderModel.model" ng-disabled="!orderModel.data" material-select>
                     <option value="">Select model</option>
-                    <option ng-repeat="item in selectsDataArr | filter: orderModel.brand" ng-value="item.model">{{item.model}}</option>
+                    <option ng-repeat="item in orderModel.data.model track by $index" ng-value="item">{{item}}</option>
                 </select>
             </div>
             <div input-field class="select-div">
@@ -26,7 +26,7 @@
         </div>
         <div id="inputs_container">
             <div input-field class="input-div">
-                <label for="firts_name">First name</label>
+                <label for="first_name">First name</label>
                 <input type="text" id="first_name" ng-model="orderModel.firstName">
             </div>
             <div input-field class="input-div">
@@ -40,7 +40,6 @@
         </div>
         <div id="submit_container">
             <button class="btn waves-effect waves-light" type="submit" name="action" message="{{messageForToast}}" duration="3000" toast='click'>Send
-                <!-- <i class="material-icons right">send</i> -->
             </button>
         </div>
     </form>

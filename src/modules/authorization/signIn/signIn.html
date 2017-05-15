@@ -1,0 +1,14 @@
+<div ng-controller="authorizationController">
+	<div id="signInModal" class="modal">
+		<div class="modal-content">	
+			<h3>Sign In</h3>
+			<form ng-submit="login()">
+				<input ng-model="loginModel.email" type="email" placeholder="Email">
+				<input ng-model="loginModel.password" type="password" placeholder="Password">
+				<p>{{warning}}</p><br>
+				<button>Sign In</button>
+			</form>
+			<button class=" modal-close" modal data-target="signUpModal">Sign Up</button>
+		</div>
+	</div>
+</div>

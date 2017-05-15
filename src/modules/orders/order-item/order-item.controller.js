@@ -1,8 +1,8 @@
 angular.module('ordersModule')
-.controller('orderItemController', ['$scope', 'ordersService', function($scope, ordersService){
+.controller('orderItemController', ['$scope', 'ordersService', 'order', function($scope, ordersService, order){
 	// VARIABLES
 	$scope.orderModel = {};
-	$scope.selectsDataArr = [];
+	$scope.selectsDataArr = order;
 	$scope.selectsServicesArr = [
 		{
 			"service": "Set spoiler"
@@ -12,7 +12,6 @@ angular.module('ordersModule')
 		}
 	];
 
-	// QUESTION !!! ****************************************************
 	$scope.messageForToast = 'toast';
 
 	// FUNCTIONS
@@ -23,7 +22,8 @@ angular.module('ordersModule')
 		});
 	};	
 	
-	$scope.getDataForSelects();
+	// $scope.getDataForSelects();
+	console.log(order);
 
 	$scope.sendData = function() {
 		console.log("Order model: ", $scope.orderModel);
@@ -43,6 +43,10 @@ angular.module('ordersModule')
 				alert("Some fiels are empty!");
 				$scope.messageForToast = 'Some fiels are empty.';				
 			} else {
+				console.log($scope.orderModel);
+				$scope.orderModel.brand = $scope.orderModel.data.brand;
+				delete $scope.orderModel.data;
+				console.log($scope.orderModel);
 				ordersService.sendOrder($scope.orderModel);
 				alert("Good! Your order accepted!");
 				$scope.messageForToast = 'Good! Your order accepted!';
@@ -54,7 +58,6 @@ angular.module('ordersModule')
 	// $scope.postOrder = function(){
 	// 	ordersService.postOrder($scope.postOrderModel);
 	// };
-
 
 
 	// Input Date

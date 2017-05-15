@@ -2,17 +2,22 @@
     <nav role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" class="brand-logo" ui-sref="home" ui-sref-active="active-nav"><img src="images/logo.png" alt="logo fat tony"></a>
-            <ul class="right hide-on-med-and-down">
+            <ul class="right hide-on-med-and-down main-nav">
                 <li><a ui-sref="home" ui-sref-active="active-nav">Home</a></li>
                 <li><a ui-sref="order" ui-sref-active="active-nav">Order</a></li>
                 <li><a ui-sref="gallery" ui-sref-active="active-nav">Gallery</a></li>
                 <li><a ui-sref="contact" ui-sref-active="active-nav">Contact</a></li>
+                <li ng-hide="loggedUser"><a modal data-target="signInModal">Sign In</a></li>
+                <li ng-show="loggedUser"><a ng-click="signOut()">Sign Out</a></li>
             </ul>
+
             <ul id="nav-mobile" class="side-nav">
                 <li><a ui-sref="home" ui-sref-active="active-nav">Home</a></li>
                 <li><a ui-sref="order" ui-sref-active="active-nav">Order</a></li>
                 <li><a ui-sref="gallery" ui-sref-active="active-nav">Gallery</a></li>
                 <li><a ui-sref="contact" ui-sref-active="active-nav">Contact</a></li>
+                <li ng-hide="loggedUser"><a modal data-target="signInModal">Sign In</a></li>
+                <li ng-show="loggedUser"><a ng-click="signOut()">Sign Out</a></li>
             </ul>
             <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="200" data-closeonclick="true"><i class="material-icons">menu</i></a>
         </div>

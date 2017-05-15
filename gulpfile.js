@@ -87,6 +87,7 @@ gulp.task('js', function() {
 			'bower_components/materialize/dist/js/materialize.js',					
 			'bower_components/angular/angular.js',
 			'bower_components/angular-ui-router/release/angular-ui-router.js',
+			'bower_components/angular-local-storage/dist/angular-local-storage.min.js',
 			'bower_components/angular-materialize/src/angular-materialize.js',
 			'bower_components/ngmap/build/scripts/ng-map.min.js'		
 			])

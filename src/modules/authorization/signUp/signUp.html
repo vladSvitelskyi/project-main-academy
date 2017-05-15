@@ -1,0 +1,14 @@
+<div ng-controller="authorizationController">
+	<div id="signUpModal" class="modal">
+		<div class="modal-content">	
+			<h3>Sign Up</h3>
+			<form ng-submit="registration()">
+				<input ng-model="registrationModel.firstName" type="text" placeholder="First name">
+				<input ng-model="registrationModel.lastName" type="text" placeholder="Last name">
+				<input ng-model="registrationModel.email" type="email" placeholder="Email">
+				<input ng-model="registrationModel.password" type="password" placeholder="Password">
+				<button>Sign Up</button>
+			</form>
+		</div>
+	</div>
+</div>

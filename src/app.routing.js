@@ -1,6 +1,11 @@
 // All Angular routes
 angular.module('app')
-    .config(['$stateProvider', '$locationProvider', '$urlRouterProvider',  function($stateProvider, $locationProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$qProvider', 'localStorageServiceProvider', function($stateProvider, $locationProvider, $urlRouterProvider, $qProvider, localStorageServiceProvider) {
+        localStorageServiceProvider
+            .setPrefix('localPrefix')
+            .setStorageType('localStorage')
+            .setNotify(true, true);
+        $qProvider.errorOnUnhandledRejections(false);
         $locationProvider.hashPrefix('');
         $urlRouterProvider.otherwise("/");
         $stateProvider
@@ -11,13 +16,13 @@ angular.module('app')
             .state('order', {
                 url: '/order',
                 templateUrl: './views/orders/order-item/order-item.html',
-                controller: 'orderItemController'
-                // resolve: {
-                //     order: function(ordersService){
-                //         console.log("Order resolve!");
-                //         return ordersService.getDataForSelects();
-                //     }
-                // }                
+                controller: 'orderItemController',
+                resolve: {
+                    order: function(ordersService) {
+                        console.log("Order resolve!");
+                        return ordersService.getDataForSelects();
+                    }
+                }
             })
             .state('gallery', {
                 url: '/gallery',
@@ -27,5 +32,21 @@ angular.module('app')
                 url: '/contact',
                 templateUrl: './views/contact/contact.html',
                 controller: 'contactController'
-            });
+            })
+            .state('admin', {
+                url: '/admin',
+                templateUrl: './views/admin/admin.html',
+                controller: 'adminController',
+                resolve: {
+                    check: function($rootScope, $location, $state, $q) {
+                        var defered = $q.defer();
+                        if (!$rootScope.loggedUser || $rootScope.loggedUser.role !== 'admin') {
+                            defered.reject('not authorized');
+                        } else {
+                            defered.resolve();
+                        }
+                        return defered.promise;
+                    }
+                }
+            })
     }]);
