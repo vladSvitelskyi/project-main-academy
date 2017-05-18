@@ -48,7 +48,8 @@ gulp.task('sass', ['bower_styles','images'], function() {
 gulp.task('bower_styles', function() {
 	gulp.src([
 		// here would be libs css files
-		'bower_components/materialize/dist/css/materialize.css'
+		'bower_components/materialize/dist/css/materialize.css',
+		'bower_components/angular-toastr/dist/angular-toastr.min.css'		
 		])
 		.pipe(concat('bower_components.css'))
 		.pipe(minifyCSS({compatibility: 'ie8'}))
@@ -89,7 +90,9 @@ gulp.task('js', function() {
 			'bower_components/angular-ui-router/release/angular-ui-router.js',
 			'bower_components/angular-local-storage/dist/angular-local-storage.min.js',
 			'bower_components/angular-materialize/src/angular-materialize.js',
-			'bower_components/ngmap/build/scripts/ng-map.min.js'		
+			'bower_components/ngmap/build/scripts/ng-map.min.js',
+			'bower_components/angular-toastr/dist/angular-toastr.min.js',
+			'bower_components/angular-toastr/dist/angular-toastr.tpls.js'					
 			])
 		.pipe(concat('bower_components.js'))
 		// .pipe(minify())

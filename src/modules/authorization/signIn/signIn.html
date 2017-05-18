@@ -1,14 +1,26 @@
 <div ng-controller="authorizationController">
-	<div id="signInModal" class="modal">
-		<div class="modal-content">	
-			<h3>Sign In</h3>
-			<form ng-submit="login()">
-				<input ng-model="loginModel.email" type="email" placeholder="Email">
-				<input ng-model="loginModel.password" type="password" placeholder="Password">
-				<p>{{warning}}</p><br>
-				<button>Sign In</button>
-			</form>
-			<button class=" modal-close" modal data-target="signUpModal">Sign Up</button>
-		</div>
-	</div>
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <h3>Sign In</h3>
+            <form ng-submit="login()">
+                <div id="inputs_container">
+                    <div input-field class="input-div">
+                        <input ng-model="loginModel.email" id="email_input" type="email">
+                        <label for="email_input">Email</label>
+                    </div>
+                    <div input-field class="input-div">
+                        <input ng-model="loginModel.password" id="password_input" type="password">
+                        <label for="password_input">Password</label>
+                    </div>
+                </div>
+                <p>{{warning}}</p>
+                <div id="btn_container">
+                    <button class="btn waves-effect waves-light">Sign In</button>
+                </div>
+            </form>
+            <div id="btn_container">
+                <button class="btn waves-effect waves-light modal-close" modal data-target="signUpModal">Sign Up</button>
+            </div>
+        </div>
+    </div>
 </div>

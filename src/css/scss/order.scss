@@ -44,6 +44,9 @@
 		& .input-div:first-child {
 			margin-top: 30px;
 		}	
+		& .input-field label:not(.label-icon).active {
+			font-size: 1rem;
+		}
 		& label {
 			color: $grey_darken_4;
 		    font-family: $orbitron;
@@ -53,7 +56,6 @@
 		    cursor: pointer;
 		}	
 		& input[type=text] {
-			padding-left: 15px;
 			color: $indigo_darken_4;
 		    font-family: $orbitron;
 		    font-weight: 300;
@@ -83,12 +85,3 @@
 .picker__close, .picker__clear, .picker__today {
 	color: #26a69a;
 } 
-
-/* validation toast */
-.toast {
-    color: $white;
-    background-color: $grey_darken_4;
-    font-family: $orbitron;
-    letter-spacing: 0.2rem;
-}
-

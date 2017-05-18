@@ -17,18 +17,20 @@ angular.module('authorizationModule')
                         console.log("Success! You Sign In!")
                         $rootScope.loggedUser = user;
                         localStorageService.set('logged', user);
-                        $scope.loginModel = {};
                         angular.element('#signInModal').modal('close');
+                        $scope.loginModel = {};
                         if (user.role == 'admin') {
                             $state.go('admin');
                             return;
                         }
-                        $state.go('contact');
+                        $state.go('profile');
                     } else {
                         $scope.warning = 'Incorrect email or password';
-                        $timeout(function(){
-                            $scope.warning = '';
-                        }, 3000); 
+                        setTimeout(function() {
+                            $scope.$apply(function() {
+                                $scope.warning = '';
+                            });
+                        }, 3000);
                         console.log("Error! You dont Sign In");
                     }
                 })
@@ -39,8 +41,8 @@ angular.module('authorizationModule')
             authorizationService.registration($scope.registrationModel)
                 .then(function(user) {
                     $rootScope.registeredUser = user;
-                    $scope.registrationModel = {};
                     angular.element('#signInModal').modal('close');
+                    $scope.registrationModel = {};
                 });
         };
     }])

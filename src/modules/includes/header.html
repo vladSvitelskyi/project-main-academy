@@ -8,18 +8,22 @@
                 <li><a ui-sref="gallery" ui-sref-active="active-nav">Gallery</a></li>
                 <li><a ui-sref="contact" ui-sref-active="active-nav">Contact</a></li>
                 <li ng-hide="loggedUser"><a modal data-target="signInModal">Sign In</a></li>
+                <li ng-show="loggedUser && loggedUser.role !== 'admin'"><a ui-sref="profile" ui-sref-active="active-nav">My profile</a></li>
+                <li ng-show="loggedUser.role == 'admin'"><a ui-sref="admin" ui-sref-active="active-nav">Admin page</a></li>
                 <li ng-show="loggedUser"><a ng-click="signOut()">Sign Out</a></li>
             </ul>
-
             <ul id="nav-mobile" class="side-nav">
                 <li><a ui-sref="home" ui-sref-active="active-nav">Home</a></li>
                 <li><a ui-sref="order" ui-sref-active="active-nav">Order</a></li>
                 <li><a ui-sref="gallery" ui-sref-active="active-nav">Gallery</a></li>
                 <li><a ui-sref="contact" ui-sref-active="active-nav">Contact</a></li>
                 <li ng-hide="loggedUser"><a modal data-target="signInModal">Sign In</a></li>
+                <li ng-show="loggedUser && loggedUser.role !== 'admin'"><a ui-sref="profile" ui-sref-active="active-nav">My profile</a></li>
+                <li ng-show="loggedUser.role == 'admin'"><a ui-sref="admin" ui-sref-active="active-nav">Admin page</a></li>
                 <li ng-show="loggedUser"><a ng-click="signOut()">Sign Out</a></li>
             </ul>
             <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="200" data-closeonclick="true"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+    <span ng-show="loggedUser">{{loggedUser.firstName + ' ' + loggedUser.lastName}}</span>
 </header>

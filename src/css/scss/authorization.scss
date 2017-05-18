@@ -1,0 +1,66 @@
+#signInModal, #signUpModal {
+	width: 30%;
+	& h3 {
+		text-align: center;
+		margin: 0;
+	}
+	& p {
+		text-align: center;
+		margin: 0;
+		color: red;
+	}
+	& #inputs_container {
+		& .input-div:first-child {
+			margin-top: 15px;
+		}	
+		& .input-field {
+			margin-top: 0;
+			& label:not(.label-icon).active {
+				font-size: 0.9rem;
+			}
+		}
+		& label {
+			color: $grey_darken_4;
+		    font-family: $orbitron;
+		    font-weight: 300;
+		    font-size: 1.1rem;	
+		    letter-spacing: 0.1rem;			    	
+		    cursor: pointer;
+		}	
+		& input[type=text], input[type=email] {
+			color: $indigo_darken_4;
+		    font-family: $orbitron;
+		    font-weight: 300;
+		    font-size: 1.1rem;
+		    letter-spacing: 0.2rem;	
+		    cursor: pointer;
+		}
+		& input[type=password] {
+			color: $indigo_darken_4;
+		    font-family: $orbitron;
+		    font-weight: 900;
+		    font-size: 1.1rem;
+		    letter-spacing: 0.2rem;	
+		    cursor: pointer;
+		}
+	}	
+	& #btn_container {
+		margin-top: 10px;
+		text-align: center;
+	    & .btn {
+	    	width: 150px;
+	        color: $white;
+	        background-color: $grey_darken_4;
+	        font-family: $orbitron;
+	        letter-spacing: 0.2rem;
+	        &:hover {
+	            color: $white;
+	            background-color: $indigo_darken_4;
+	        }
+	    }
+	}
+}
+
+body .modal .modal-content {
+	padding: 20px;
+}

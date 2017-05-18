@@ -1,6 +1,9 @@
 // All Angular routes
 angular.module('app')
-    .config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$qProvider', 'localStorageServiceProvider', function($stateProvider, $locationProvider, $urlRouterProvider, $qProvider, localStorageServiceProvider) {
+    .config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$qProvider', 'localStorageServiceProvider', 'toastrConfig', function($stateProvider, $locationProvider, $urlRouterProvider, $qProvider, localStorageServiceProvider, toastrConfig) {
+        angular.extend(toastrConfig, {
+            timeOut: 3000,
+        });
         localStorageServiceProvider
             .setPrefix('localPrefix')
             .setStorageType('localStorage')
@@ -19,7 +22,6 @@ angular.module('app')
                 controller: 'orderItemController',
                 resolve: {
                     order: function(ordersService) {
-                        console.log("Order resolve!");
                         return ordersService.getDataForSelects();
                     }
                 }
@@ -33,11 +35,19 @@ angular.module('app')
                 templateUrl: './views/contact/contact.html',
                 controller: 'contactController'
             })
+            .state('profile', {
+                url: '/profile',
+                templateUrl: './views/profile/profile.html',
+                controller: 'profileController'
+            })
             .state('admin', {
                 url: '/admin',
                 templateUrl: './views/admin/admin.html',
                 controller: 'adminController',
                 resolve: {
+                    order: function(adminService) {
+                        return adminService.getOrders();
+                    },
                     check: function($rootScope, $location, $state, $q) {
                         var defered = $q.defer();
                         if (!$rootScope.loggedUser || $rootScope.loggedUser.role !== 'admin') {
@@ -49,4 +59,8 @@ angular.module('app')
                     }
                 }
             })
+            .state('secret', {
+                url: '/secret',
+                templateUrl: './views/secret/secret.html'
+            });
     }]);

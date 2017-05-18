@@ -26,6 +26,9 @@
     header nav ul a {
 	    font-size: 0.6rem;
 	}
+    header span {
+        top: 19px;
+    }
     nav,
     nav .nav-wrapper i,
     nav a.button-collapse,
@@ -69,7 +72,13 @@
             height: 250px;
         }
     }
-
+    
+    /******************/
+    /****** PROFILE ******/
+    /******************/
+    #profile_container {
+        width: 60%;
+    }
 }
 
 
@@ -112,7 +121,9 @@
 	header nav ul a {
 	    font-size: 0.9rem;
 	}
-
+    header span {
+        top: 25px;
+    }
     nav,
     nav .nav-wrapper i,
     nav a.button-collapse,
@@ -146,5 +157,12 @@
 
     #gallery_container {
         width: 85%;
+    }
+
+    /******************/
+    /****** PROFILE ******/
+    /******************/
+    #profile_container {
+        width: 25%;
     }
 }

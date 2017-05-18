@@ -1,5 +1,5 @@
 angular.module('ordersModule')
-.controller('orderItemController', ['$scope', 'ordersService', 'order', function($scope, ordersService, order){
+.controller('orderItemController', ['$scope', 'ordersService', 'order', 'toastr', function($scope, ordersService, order, toastr){
 	// VARIABLES
 	$scope.orderModel = {};
 	$scope.selectsDataArr = order;
@@ -12,8 +12,6 @@ angular.module('ordersModule')
 		}
 	];
 
-	$scope.messageForToast = 'toast';
-
 	// FUNCTIONS
 	$scope.getDataForSelects = function(type){
 		ordersService.getDataForSelects(type)
@@ -21,12 +19,8 @@ angular.module('ordersModule')
 			$scope.selectsDataArr = data;
 		});
 	};	
-	
-	// $scope.getDataForSelects();
-	console.log(order);
 
 	$scope.sendData = function() {
-		console.log("Order model: ", $scope.orderModel);
 		// validation
 		var flag = 6;
 		for(key in $scope.orderModel) {
@@ -36,30 +30,19 @@ angular.module('ordersModule')
 			}
 		}
 		if (angular.equals({}, $scope.orderModel)) {
-			alert("Please, fill all the fiels.");
-			$scope.messageForToast = 'Please, fill all the fiels.';
+			toastr.warning('Please, fill all the fields.');
 		} else {
 			if (flag != 0) {
-				alert("Some fiels are empty!");
-				$scope.messageForToast = 'Some fiels are empty.';				
+				toastr.warning('Some fields are empty.');
 			} else {
-				console.log($scope.orderModel);
 				$scope.orderModel.brand = $scope.orderModel.data.brand;
-				delete $scope.orderModel.data;
-				console.log($scope.orderModel);
+				delete $scope.orderModel.data;;
 				ordersService.sendOrder($scope.orderModel);
-				alert("Good! Your order accepted!");
-				$scope.messageForToast = 'Good! Your order accepted!';
+				toastr.success('Success! Your order accepted.');
 			}	
 		}
 	};
 	
-	
-	// $scope.postOrder = function(){
-	// 	ordersService.postOrder($scope.postOrderModel);
-	// };
-
-
 	// Input Date
 	var currentTime = new Date();
 	$scope.currentTime = currentTime;

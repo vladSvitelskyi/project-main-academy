@@ -4,15 +4,17 @@ angular.module('app', [
         'LocalStorageModule',
         'ui.materialize',
         'ngMap',
+        'toastr',
         'authorizationModule',
         'ordersModule',
         'contactModule',
+        'profileModule',
         'adminModule'
     ])
     .controller('mainController', ['$scope', '$rootScope', '$state', 'localStorageService', function($scope, $rootScope, $state, localStorageService) {
         $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
             if (error === 'not authorized') {
-                return $state.go('home');
+                return $state.go('secret');
             }
         });
         $scope.signOut = function() {

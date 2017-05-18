@@ -1,0 +1,18 @@
+<div class="container" id="profile_container">
+    <h3>My profile</h3>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="card">
+                <div class="card-image">
+                    <img materialboxed class="materialboxed responsive-img" src="././images/profile_img.png" alt="propfile image">
+                </div>
+                <div class="card-content">
+                    <h5>{{loggedUser.firstName + ' ' + loggedUser.lastName}}</h5>
+                    <div class="profile-content"><p>First name:</p><p>{{loggedUser.firstName}}</p></div>
+					<div class="profile-content"><p>Last name:</p><p>{{loggedUser.lastName}}</p><div>
+					<div class="profile-content"><p>Email:</p><p>{{loggedUser.email}}</p><div>       
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
