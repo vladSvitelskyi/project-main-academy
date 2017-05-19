@@ -1,7 +1,7 @@
 <div class="container" id="admin_container">
     <h3>Admin page</h3>
     <div class="row" ng-show="orderModel.length == 0">no orders</div>
-	<div class="row" ng-hide="orderModel.length == 0">
+	<div class="row" id="name_column_container" ng-hide="orderModel.length == 0">
         <div class="col s1 m1 l1">
         	<span>Brand</span>
         </div>
@@ -24,7 +24,7 @@
         	<span>Status</span>
         </div>                                           
     </div>
-    <div class="row" ng-repeat="item in orderModel">
+    <div class="row" id="row_container" ng-repeat="item in orderModel">
         <div class="col s1 m1 l1">
         	<span>{{item.brand}}</span>
         </div>

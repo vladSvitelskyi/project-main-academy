@@ -1,0 +1,18 @@
+#admin_container {
+	& h3 {
+        margin-top: 0;
+        padding-top: 20px;
+        text-align: center;     		
+	}
+	& span {
+		font-size: 1rem;
+	}
+	& #name_column_container {
+
+	}
+	& #row_container {
+
+	}
+}
+
+    // "start": "npm install && npm i -g bower install && bower install && gulp",

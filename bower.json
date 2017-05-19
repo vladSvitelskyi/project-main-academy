@@ -23,5 +23,8 @@
     "ngmap": "^1.18.4",
     "angular-local-storage": "^0.5.2",
     "angular-toastr": "^2.1.1"
+  },
+  "resolutions": {
+    "materialize": "^0.98.2"
   }
 }
