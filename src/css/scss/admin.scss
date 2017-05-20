@@ -1,18 +1,51 @@
 #admin_container {
+	width: 90%;
+    min-height: 300px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 	& h3 {
         margin-top: 0;
-        padding-top: 20px;
-        text-align: center;     		
+        padding-top: 20px;     		
 	}
 	& span {
 		font-size: 1rem;
 	}
+	& label {
+	    font-family: $orbitron;
+	    font-weight: 300;
+	    font-size: 1rem;
+	    line-height: 1.75rem;
+	}
+	& button {
+		width: 75px;
+		height: 25px;
+		margin-left: 10px;
+	    line-height: 1.75rem;
+	    vertical-align: text-bottom;
+	    padding: 0;
+	    font-size: 1rem;
+	}
+	& .btn {
+		background-color: $red_darken_2;
+		&:hover {
+			background-color: $red_darken_1;
+		}
+	}
 	& #name_column_container {
-
+		& .col {
+			border-bottom: 1px solid black;
+				text-align: center;
+			& span{
+				    font-weight: 500;
+			}
+		}
 	}
 	& #row_container {
+		& .col {
+				text-align: center;
+			& span{
 
+			}
+		}
 	}
 }
-
-    // "start": "npm install && npm i -g bower install && bower install && gulp",

@@ -1,11 +1,9 @@
 #signInModal, #signUpModal {
 	width: 30%;
 	& h3 {
-		text-align: center;
 		margin: 0;
 	}
 	& p {
-		text-align: center;
 		margin: 0;
 		color: red;
 	}
@@ -46,7 +44,6 @@
 	}	
 	& #btn_container {
 		margin-top: 10px;
-		text-align: center;
 	    & .btn {
 	    	width: 150px;
 	        color: $white;

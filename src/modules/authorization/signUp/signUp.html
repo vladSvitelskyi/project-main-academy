@@ -1,7 +1,7 @@
 <div ng-controller="authorizationController">
     <div id="signUpModal" class="modal">
         <div class="modal-content">
-            <h3>Sign Up</h3>
+            <h3 class="center">Sign Up</h3>
             <form ng-submit="registration()">
                 <div id="inputs_container">
                     <div input-field class="input-div">
@@ -20,11 +20,11 @@
                         <input ng-model="registrationModel.password" id="password_input" type="password">
                         <label for="password_input">Password</label>
                     </div>
-                    <div id="btn_container">
+                    <div class="center" id="btn_container">
                         <button class="btn waves-effect waves-light">Sign Up</button>
                     </div>
             </form>
-            <div id="btn_container">
+            <div class="center" id="btn_container">
                 <button class="btn waves-effect waves-light modal-close" modal data-target="signInModal">Sign In</button>
             </div>
             </div>

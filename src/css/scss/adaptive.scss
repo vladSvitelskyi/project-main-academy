@@ -11,6 +11,9 @@
     h5 {
    		font-size: 1.2rem;
 	}
+    h6 {
+        font-size: 0.9rem;
+    }
 	p {
 		font-size: 0.7rem;
 	}
@@ -23,9 +26,9 @@
     /******************/
 
     /* header */
-    header nav ul a {
-	    font-size: 0.6rem;
-	}
+    header nav .side-nav li a {
+        font-size: 1.1rem;
+    }
     header span {
         top: 19px;
     }
@@ -56,6 +59,10 @@
     /****** ORDER ******/
     /******************/
 
+    #order_container {
+        width: 90%;
+    }
+
     /******************/
     /****** GALLERY ******/
     /******************/
@@ -70,6 +77,14 @@
     #contact_container {
         & #google_map_container {
             height: 250px;
+        }
+        & .row {
+            & #col_address img {
+                margin-top: 0;
+            }
+            & #col_contacts .contact_text_container h6 {
+                vertical-align: middle;      
+            } 
         }
     }
     
@@ -103,12 +118,18 @@
     h1 {
     	font-size: 4.5rem;
     }
+    h3 {
+        font-size: 3rem;
+    }
     h4 {
         font-size: 2.5rem;
     }
     h5 {
    		font-size: 2rem;
 	}
+    h6 {
+        font-size: 1.6rem;
+    }
 	p {
 		font-size: 1.1rem;
 	}
@@ -118,8 +139,8 @@
 
 
     /* header */
-	header nav ul a {
-	    font-size: 0.9rem;
+	header nav .main-nav li a {
+	    font-size: 1.1rem;
 	}
     header span {
         top: 25px;
@@ -151,11 +172,23 @@
     /****** ORDER ******/
     /******************/
 
+    #order_container {
+        width: 50%;
+    }
+
     /******************/
     /****** GALLERY ******/
     /******************/
 
     #gallery_container {
+        width: 85%;
+    }
+
+    /******************/
+    /****** CONTACT ******/
+    /******************/
+
+    #contact_container {
         width: 85%;
     }
 

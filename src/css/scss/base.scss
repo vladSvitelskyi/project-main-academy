@@ -20,6 +20,8 @@ $grey_darken_3: #424242;
 $grey_darken_4: #212121;
 $indigo_darken_4: #1a237e;
 $red_lighten_3: #ef9a9a;
+$red_darken_1: #e53935;
+$red_darken_2: #d32f2f;
 
 
 /* fonts */
@@ -29,8 +31,6 @@ $orbitron: "Orbitron", sans-serif;
 /***********************/
 /***** MAIN STYLES *****/
 /***********************/
-
-/* html */
 
 h1 {
     color: $white;
@@ -93,152 +93,6 @@ span {
 }
 .active-nav { 
     color: red;
-}
-
-/* header */
-
-header nav {
-    background-color: $grey_darken_4;
-    & .main-nav {
-        & li {
-            margin-right: 20px;
-            &:nth-child(4){
-                margin-right: 80px;
-            }    
-            a {
-                padding: 0;
-                font-family: $orbitron;
-                font-weight: 300;
-                font-size: 0.9rem;
-                letter-spacing: 0.05rem;
-            }
-        }
-    }
-    & .side-nav {
-        background-color: $grey_darken_4;
-        & li {
-            border-bottom: 1px solid $white; 
-            & a {
-                color: $white;
-                &:hover {
-                    color: red;
-                }
-            }   
-        } 
-    }
-}
-
-header span {
-    position: absolute;
-    top: 22px;
-    right: 20px;
-    color: #fff;
-    padding: 0;
-    margin: 0;
-    letter-spacing: 0.05rem;   
-}
-
-nav,
-nav .nav-wrapper i,
-nav a.button-collapse,
-nav a.button-collapse i {
-    height: 70px;
-    line-height: 70px;
-}
-
-#logo-container img {
-    width: 110px;
-    height: 70px;
-}
-
-/* slider */
-
-.slider {
-    &.fullscreen {
-        position: relative;
-        margin: 0 auto;
-        width: 100%;
-        height: 450px;
-    }
-}
-
-.slider .indicators {
-    & .indicator-item {
-        width: 15px;
-        height: 15px;
-        background-color: $grey_darken_4;
-        &.active {
-            width: 18px;
-            height: 18px;
-            background-color: $white;
-        }
-    }
-}
-
-.slider .slides li .caption {
-    top: 10%;
-}
-
-/* specifications */
-
-#specifications .row .col { 
-    padding: 0 1rem;
-}
-.icon-block {
-    & .material-icons {
-        font-size: inherit;
-    }
-}
-
-/* parallax */
-
-.parallax-container {
-    min-height: 450px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255, 255, 255, .9);
-    & .section {
-        width: 100%;
-        & h1 {
-            margin-top: 10%;
-        }
-        & h5 {
-            margin-bottom: 5%;
-            color: $white;
-        }
-        & .btn-large {
-            color: $white;
-            background-color: $grey_darken_4;
-            font-family: $orbitron;
-            letter-spacing: 0.2rem;
-            &:hover {
-                color: $white;
-                background-color: $indigo_darken_4;
-            }
-        }
-    }
-}
-
-/* history */
-
-#history_h5 {
-    margin-top: 3%;
-}
-
-/* footer */
-
-.page-footer  {
-  margin: 0; 
-  background-color: $grey_darken_4;
-    & .row .col {
-        padding: 0rem;
-    }
-    & .footer-copyright {
-        min-height: 40px;
-    }
-    & h5, p, span {
-      color: $white;
-    }
 }
 
 /*********************/

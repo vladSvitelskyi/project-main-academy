@@ -1,6 +1,6 @@
 <div class="container" id="order_container">
-    <h3>Your order</h3>
-    <form class="col s12" ng-submit="sendData()">
+    <h3 class="center">Your order</h3>
+    <form class="col s12 m12 l12" ng-submit="sendData()">
         <div id="selects_container">
             <div input-field class="select-div">
                 <legend>1. Choose brand</legend>
@@ -38,7 +38,7 @@
                 <input ng-model="orderModel.date" input-date type="text" name="created" id="inputCreated" format="dd/mm/yyyy" months-full="{{ month }}" months-short="{{ monthShort }}" weekdays-full="{{ weekdaysFull }}" weekdays-short="{{ weekdaysShort }}" weekdays-letter="{{ weekdaysLetter }}" disable="disable" min="{{ minDate }}" first-day="1">
             </div>
         </div>
-        <div id="submit_container">
+        <div class="center" id="submit_container">
             <button class="btn waves-effect waves-light">Send
             </button>
         </div>

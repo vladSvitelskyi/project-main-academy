@@ -23,7 +23,6 @@ angular.module('adminModule')
             adminService.getOrders()
                 .then(function(data) {
                     $scope.orderModel = data;
-                    console.log($scope.orderModel);
                 });
         }
 
