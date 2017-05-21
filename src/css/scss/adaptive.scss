@@ -1,30 +1,31 @@
-/* Phones ----------- */
+/* Phones and Tablets ----------- */
 
-@media only screen and (min-width: 0px) and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 992px) {
     /* html */
     h1 {
-    	font-size: 3rem;
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.6rem;
     }
     h4 {
         font-size: 1.5rem;
     }
     h5 {
-   		font-size: 1.2rem;
-	}
+        font-size: 1.2rem;
+    }
     h6 {
         font-size: 0.9rem;
     }
-	p {
-		font-size: 0.7rem;
-	}
-	span {
-		font-size: 0.5rem;
-	}
-
+    p {
+        font-size: 0.7rem;
+    }
+    span {
+        font-size: 0.5rem;
+    }
     /******************/
     /****** HOME ******/
     /******************/
-
     /* header */
     header nav .side-nav li a {
         font-size: 1.1rem;
@@ -50,27 +51,33 @@
         }
     }
     /* parallax */
-    
     .parallax-container {
         min-height: 350px;
     }
-
+    /* footer */
+    .page-footer {
+        & .row .col.s12 {
+            padding: 0 15px 10px;
+        }
+    }
     /******************/
     /****** ORDER ******/
     /******************/
-
     #order_container {
         width: 90%;
+        & h3 {
+            margin-bottom: 0;
+        }
+        & #selects_container .select-div {
+            margin-top: 15px;
+        }
     }
-
     /******************/
     /****** GALLERY ******/
     /******************/
-
     #gallery_container {
         width: 70%;
     }
-    
     /******************/
     /****** CONTACT ******/
     /******************/
@@ -83,32 +90,95 @@
                 margin-top: 0;
             }
             & #col_contacts .contact_text_container h6 {
-                vertical-align: middle;      
-            } 
+                vertical-align: middle;
+            }
         }
     }
-    
+    /***************************/
+    /****** AUTHORIZATION ******/
+    /***************************/
+    #signInModal,
+    #signUpModal {
+        width: 90%;
+    }
     /******************/
     /****** PROFILE ******/
     /******************/
     #profile_container {
         width: 60%;
     }
-}
-
-
-/* Tablets ----------- */
-
-@media only screen and (min-width: 661px) and (max-width: 992px) {
-
+    /***********************/
+    /****** ADMIN PAGE ******/
+    /***********************/
+    #admin_container {
+        width: 90%;
+        min-height: 220px;
+        & .row {
+            margin-bottom: 0;
+            & .col {
+                padding: 0;
+            }
+        }
+        & h3 {
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+        & label {
+            padding-left: 20px;
+            font-size: 0.5rem;
+        }
+        & button {
+            width: 40px;
+            height: 15px;
+            margin: 0;
+            font-size: 0.5rem;
+            line-height: 0.75rem;
+        }
+        & [type=checkbox].filled-in:not(:checked)+label:after,
+        [type=checkbox].filled-in:checked+label:after {
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-width: 1px;
+        }
+        & [type=checkbox].filled-in:checked+label:before {
+            top: 4px;
+            width: 5px;
+            height: 7px;
+        }
+        & #name_column_container {
+            & .col {
+                & span {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        & #row_container {
+            & .col {
+                & span {
+                    font-size: 0.45rem;
+                }
+            }
+        }
+    }
+    /********************/
+    /****** SECRET ******/
+    /********************/
+    #secret_container {
+        min-height: 220px;
+        & p {
+            margin-top: 180px;
+            font-weight: 900;
+            font-size: 3rem;
+            letter-spacing: 0.2rem;
+        }
+    }
 }
 
 
 /* Desktops and laptops ----------- */
 
-@media only screen and (min-width: 993px) and (max-width: 1599px) {
-    
-}
+@media only screen and (min-width: 993px) and (max-width: 1599px) {}
 
 
 /* Large screens ----- */
@@ -116,7 +186,7 @@
 @media only screen and (min-width: 1600px) {
     /* html */
     h1 {
-    	font-size: 4.5rem;
+        font-size: 4.5rem;
     }
     h3 {
         font-size: 3rem;
@@ -125,23 +195,21 @@
         font-size: 2.5rem;
     }
     h5 {
-   		font-size: 2rem;
-	}
+        font-size: 2rem;
+    }
     h6 {
         font-size: 1.6rem;
     }
-	p {
-		font-size: 1.1rem;
-	}
-	span {
-		font-size: 1rem;
-	}
-
-
+    p {
+        font-size: 1.1rem;
+    }
+    span {
+        font-size: 1rem;
+    }
     /* header */
-	header nav .main-nav li a {
-	    font-size: 1.1rem;
-	}
+    header nav .main-nav li a {
+        font-size: 1.1rem;
+    }
     header span {
         top: 25px;
     }
@@ -163,39 +231,49 @@
         }
     }
     /* parallax */
-    
     .parallax-container {
         min-height: 550px;
     }
-
     /******************/
     /****** ORDER ******/
     /******************/
-
     #order_container {
         width: 50%;
     }
-
     /******************/
     /****** GALLERY ******/
     /******************/
-
     #gallery_container {
         width: 85%;
     }
-
     /******************/
     /****** CONTACT ******/
     /******************/
-
     #contact_container {
         width: 85%;
     }
-
     /******************/
     /****** PROFILE ******/
     /******************/
     #profile_container {
         width: 25%;
+        & .card .card-content p {
+            font-size: 1.3rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+    /***********************/
+    /****** ADMIN PAGE ******/
+    /***********************/
+    #admin_container {
+        width: 90%;
+        & span,
+        label {
+            font-size: 1.3rem;
+        }
+        & button {
+            width: 85px;
+            font-size: 1.3rem;
+        }
     }
 }

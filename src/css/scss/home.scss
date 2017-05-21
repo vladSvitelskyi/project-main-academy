@@ -26,6 +26,9 @@ header nav {
                 &:hover {
                     color: red;
                 }
+                &:hover {
+                    color: red;
+                }
             }
         }
     }
@@ -139,15 +142,60 @@ nav a.button-collapse i {
 .page-footer {
     margin: 0;
     background-color: $grey_darken_4;
+    & h6 {
+        color: $white;
+    }
+    & p {
+        color: $white;
+        font-size: 0.8rem;
+    }
+    & span {
+        color: $white;
+    }
     & .row .col {
         padding: 0rem;
     }
+    & #company_container {
+        & p {
+            margin: 0;
+            color: $grey_lighten_1;
+        }
+    }
+    & #links_container {
+        & ul {
+            margin: 0;
+            & li a {
+                padding: 0;
+                border-bottom: 1px solid $grey_lighten_1;
+                color: $grey_lighten_1;
+                font-family: $orbitron;
+                font-weight: 300;
+                font-size: 0.8rem;
+                letter-spacing: 0.05rem;
+                &:hover {
+                    color: red;
+                    border-bottom: 1px solid red;                    
+                }
+            }
+        }
+    }
+    & #contacts_container {
+        & p {
+            display: inline-block;
+            margin: 0;
+            color: $grey_lighten_1;
+        }
+        & .contact_text_container {
+            & .contact-paragraph {
+                font-size: 0.7rem;
+                margin-left: 5px;
+            }
+        }
+    }
     & .footer-copyright {
         min-height: 40px;
-    }
-    & h5,
-    p,
-    span {
-        color: $white;
+        & span {
+            color: red;
+        }
     }
 }

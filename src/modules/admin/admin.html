@@ -2,45 +2,45 @@
     <h3 class="center">Admin page</h3>
     <div class="row" ng-show="orderModel.length == 0">no orders</div>
 	<div class="row" id="name_column_container" ng-hide="orderModel.length == 0">
-        <div class="col s12 m1 l1">
+        <div class="col s1 m1 l1">
         	<span>Brand</span>
         </div>
-        <div class="col s12 m1 l1">
+        <div class="col s1 m1 l1">
         	<span>Model</span>
         </div>        
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>FirstName</span>
         </div>
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>Service</span>
         </div>
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>Date</span>
         </div>
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>Phone</span>
         </div> 
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>Status</span>
         </div>                                           
     </div>
     <div class="row" id="row_container" ng-repeat="item in orderModel">
-        <div class="col s12 m1 l1">
+        <div class="col s1 m1 l1">
         	<span>{{item.brand}}</span>
         </div>
-        <div class="col s12 m1 l1">
+        <div class="col s1 m1 l1">
         	<span>{{item.model}}</span>
         </div>        
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>{{item.firstName}}</span>
         </div>
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>{{item.service}}</span>
         </div>
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>{{item.date}}</span>
         </div>
-        <div class="col s12 m2 l2">
+        <div class="col s2 m2 l2">
         	<span>{{item.phone}}</span>
         </div>
         <div class="col s2 m2 l2">

@@ -1,7 +1,6 @@
 #contact_container {
 	& h3 {
-        margin-top: 0;
-        padding-top: 20px;     		
+        margin: 20px 0;     	
 	}
     & #google_map_container {
         margin: 0 auto;
@@ -30,6 +29,9 @@
 				& p {
 					display: inline-block;
 				}
+                & .contact-paragraph {
+                    margin-left: 10px;
+                }
     		}
 
 
