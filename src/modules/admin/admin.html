@@ -24,7 +24,7 @@
         	<span>Status</span>
         </div>                                           
     </div>
-    <div class="row" id="row_container" ng-repeat="item in orderModel">
+    <div class="row" id="row_container" ng-repeat="item in orderModel track by $index">
         <div class="col s1 m1 l1">
         	<span>{{item.brand}}</span>
         </div>
@@ -44,8 +44,8 @@
         	<span>{{item.phone}}</span>
         </div>
         <div class="col s2 m2 l2">
-        	<input type="checkbox" class="filled-in" id="filled-in-box"  ng-checked="item.status" ng-click="changeStatus(this.item)">
-      		<label for="filled-in-box">{{item.status ? 'Done' : 'Open'}}</label>
+        	<input type="checkbox" class="filled-in" id="filled-in-box{{$index}}"  ng-checked="item.status" ng-click="changeStatus(this.item)">
+      		<label for="filled-in-box{{$index}}">{{item.status ? 'Done' : 'Open'}}</label>
         	<button class="btn waves-effect waves-light" ng-click="deleteOrder(this.item._id.$oid)">Delete</button>
         </div>                                 
     </div>

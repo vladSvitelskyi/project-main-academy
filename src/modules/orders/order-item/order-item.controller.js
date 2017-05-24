@@ -43,7 +43,11 @@ angular.module('ordersModule')
                 } else {
                     $scope.orderModel.brand = $scope.orderModel.data.brand;
                     delete $scope.orderModel.data;
-                    ordersService.sendOrder($scope.orderModel);
+                    ordersService.sendOrder($scope.orderModel)
+                        .then(function() {
+                            $scope.orderModel = {};
+                            $scope.selectsDataArr = order;
+                        });
                     toastr.success('Success! Your order accepted.');
                 }
             }

@@ -14,7 +14,6 @@ angular.module('authorizationModule')
             authorizationService.login($scope.loginModel)
                 .then(function(user) {
                     if (user) {
-                        console.log("Success! You Sign In!")
                         $rootScope.loggedUser = user;
                         localStorageService.set('logged', user);
                         angular.element('#signInModal').modal('close');
@@ -25,24 +24,35 @@ angular.module('authorizationModule')
                         }
                         $state.go('profile');
                     } else {
-                        $scope.warning = 'Incorrect email or password';
+                        $scope.message = 'Incorrect email or password';
                         setTimeout(function() {
                             $scope.$apply(function() {
-                                $scope.warning = '';
+                                $scope.message = '';
                             });
                         }, 3000);
-                        console.log("Error! You dont Sign In");
                     }
                 })
         };
 
         // sign Up
         $scope.registration = function() {
-            authorizationService.registration($scope.registrationModel)
-                .then(function(user) {
-                    $rootScope.registeredUser = user;
-                    angular.element('#signInModal').modal('close');
-                    $scope.registrationModel = {};
-                });
-        };
+            if ($scope.registrationModel.firstName == '' || $scope.registrationModel.lastName == '' || $scope.registrationModel.email == '' || $scope.registrationModel.password == '') {
+                $scope.message = 'Some fields are empty';
+                setTimeout(function() {
+                    $scope.$apply(function() {
+                        $scope.message = '';
+                    });
+                }, 3000);
+            } else {
+                authorizationService.registration($scope.registrationModel)
+                    .then(function(user) {
+                        $rootScope.loggedUser = user;
+                        localStorageService.set('logged', user);
+                        angular.element('#signUpModal').modal('close');
+                        $scope.registrationModel = {};
+                        $state.go('profile');
+                        // angular.element('#signInModal').modal('open');
+                    });
+            }
+        }
     }])

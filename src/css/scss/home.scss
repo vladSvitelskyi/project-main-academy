@@ -67,7 +67,10 @@ nav a.button-collapse i {
         width: 100%;
         height: 450px;
     }
-}
+    & .slides li img {
+        background-size: cover;
+    }
+} 
 
 .slider .indicators {
     & .indicator-item {
