@@ -4,19 +4,18 @@ Disallow: *.pdf
 Disallow: *.xls
 Disallow: *.doc
 Disallow: *.ppt
-Disallow: *.txt
 # secret files
-Disallow: dist/views/admin/admin.html
-Disallow: dist/views/profile/profile.html
-Disallow: dist/views/secret/secret.html
+Disallow: /dist/views/admin/admin.html
+Disallow: /dist/views/profile/profile.html
+Disallow: /dist/views/secret/secret.html
 # js and css
-Allow: dist/css/*.css
-Allow: dist/js/*.js
+Allow: /dist/css/*.css
+Allow: /dist/js/*.js
 # images
-Allow: dist/images/*.jpg
-Allow: dist/images/*.jpeg
-Allow: dist/images/*.png
-Allow: dist/images/*.gif
+Allow: /dist/images/*.jpg
+Allow: /dist/images/*.jpeg
+Allow: /dist/images/*.png
+Allow: /dist/images/*.gif
 # marks for advertising tracking 
 Clean-param: utm_source&utm_medium&utm_term&utm_content&utm_campaign&yclid&gclid&_openstat&from /
 # host
@@ -28,19 +27,18 @@ Disallow: *.pdf
 Disallow: *.xls
 Disallow: *.doc
 Disallow: *.ppt
-Disallow: *.txt
 # secret files
-Disallow: dist/views/admin/admin.html
-Disallow: dist/views/profile/profile.html
-Disallow: dist/views/secret/secret.html
+Disallow: /dist/views/admin/admin.html
+Disallow: /dist/views/profile/profile.html
+Disallow: /dist/views/secret/secret.html
 # js and css
-Allow: dist/css/*.css
-Allow: dist/js/*.js
+Allow: /dist/css/*.css
+Allow: /dist/js/*.js
 # images
-Allow: dist/images/*.jpg
-Allow: dist/images/*.jpeg
-Allow: dist/images/*.png
-Allow: dist/images/*.gif
+Allow: /dist/images/*.jpg
+Allow: /dist/images/*.jpeg
+Allow: /dist/images/*.png
+Allow: /dist/images/*.gif
 
 User-agent: *
 # document extensions
@@ -52,18 +50,17 @@ Disallow: *.pdf
 Disallow: *.xls
 Disallow: *.doc
 Disallow: *.ppt
-Disallow: *.txt
 # secret files
-Disallow: dist/views/admin/admin.html
-Disallow: dist/views/profile/profile.html
-Disallow: dist/views/secret/secret.html
+Disallow: /dist/views/admin/admin.html
+Disallow: /dist/views/profile/profile.html
+Disallow: /dist/views/secret/secret.html
 # js and css
-Allow: dist/css/*.css
-Allow: dist/js/*.js
+Allow: /dist/css/*.css
+Allow: /dist/js/*.js
 # images
-Allow: dist/images/*.jpg
-Allow: dist/images/*.jpeg
-Allow: dist/images/*.png
-Allow: dist/images/*.gif
+Allow: /dist/images/*.jpg
+Allow: /dist/images/*.jpeg
+Allow: /dist/images/*.png
+Allow: /dist/images/*.gif
 
 Sitemap: https://project-main-academy.herokuapp.com/sitemap.xml
