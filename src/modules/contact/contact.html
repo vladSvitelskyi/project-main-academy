@@ -2,8 +2,8 @@
 	<h3 class="center">CONTACT</h3>
 	<div map-lazy-load="https://maps.google.com/maps/api/js"
 	  map-lazy-load-params="{{googleMapsUrl}}">
-	  	<ng-map id="google_map_container" center="[49.23278, 28.485649]" zoom="4" scrollwheel="true">
-    		<marker position="[49.23278, 28.485649]" title="KARMELYUKA ST, 9532, VINNYTSIA!" animation="Animation.BOUNCE"></marker>
+	  	<ng-map id="google_map_container" center="{{testCords}}" zoom="12" scrollwheel="false">
+    		<marker position="{{testCords}}" title="KARMELYUKA ST, 9532, VINNYTSIA!" animation="Animation.BOUNCE"></marker>
     	</ng-map>
 	</div>
 	<div class="row">

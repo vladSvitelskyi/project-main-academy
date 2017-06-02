@@ -13,7 +13,6 @@ angular.module('ordersModule')
             sendOrder: function(order) {
                 return $http.post(config.base + config.prefix + config.orders + config.apiKey, order)
                     .then(function(response) {
-                        console.log("Send order!", response);
                         return response.data;
                     })
                     .catch(function(err) {

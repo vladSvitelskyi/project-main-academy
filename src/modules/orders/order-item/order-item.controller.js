@@ -48,7 +48,7 @@ angular.module('ordersModule')
                             $scope.orderModel = {};
                             $scope.selectsDataArr = order;
                         });
-                    toastr.success('Success! Your order accepted.');
+                    toastr.success('Thanks! We will contact you.');
                 }
             }
         };
